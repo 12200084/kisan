@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<style type="text/css">
+
+	body{
+		background-color: brown;
+	}
+	.card text-center{
+		margin: 2px;
+		height: 10cm;
+		width: 8cm;
+		text-align: center;
+		background-color: skyblue;
+	position: relative;
+		left: 14cm;
+	}
+		
+	</style>
+</head>
+<body>
+	<nav class="navbar is-dark">
+            <div class="navbar-brand">
+                <a href="{% url 'editor' %}" class="navbar-item">Daily journey</a>
+                <a href="{% url 'editor' %}" class="navbar-item">Home</a>
+                 <a href="{% url 'login' %}" class="navbar-item">Log out</a>
+                 
+            </div>
+
+           <!--  <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="{% url 'editor' %}?docid=0" class="navbar-item">New day</a>
+                    <a href="{% url 'login' %}" class="navbar-item">Log out</a>
+                </div>
+            </div> -->
+        </nav>
+    <!--<div class="div1">
+ 	<h1>About Us</h1>
+	<p>I am here to update you with your daily thought, it keep you growing for human kindness. Keep record of your thought. Good grow. </p>
+	</div> -->
+	<div class="card text-center">
+  <div class="card-header">
+   
+  </div>
+  <div class="card-body">
+    <h1 class="card-title">About US</h1>
+    <p class="card-text">I am here to update you with your daily thought, it keep you growing for human kindness. Keep record of your thought. Good grow. </p>
+    <p>You want to keep your thoughts in a place where no one can find them? Or capture great ideas so they do not get lost? The online diary journey offers you a safe place for your very personal topics.</p>
+    <p>The use of diary journey is private only. There is no feature to make entries publicly viewable. This ensures that your secret diary remains safe from prying eyes. Just like in a good old paper diary.</p>
+    <a href="#" class="btn btn-primary">Learn More</a>
+  </div>
+</div>
+
+</body>
+</html>

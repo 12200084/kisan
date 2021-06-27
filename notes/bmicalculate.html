@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function myfunction(){
+		var Height = Number(document.getElementById('input').value);
+		var weight = Number(document.getElementById('input2').value);
+
+		var BMI = (weight/((Height*Height)/10000));
+		document.getElementById("result").value = BMI;
+	}
+
+</script>
+	<label>Height in cm</label>
+	<input type="numberic" name="num" id="input">
+	<label>weight in kg</label>
+	<input type="numberic" name="num" id="input2">
+	<button id="button" onclick="myfunction()">calculate</button>
+
+	<input type="numberic" id="result">
+	
+</body>
+</html>

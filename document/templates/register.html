@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <style type="text/css">
+    body{
+      background-color:brown;
+
+    }
+    form{
+      position: relative;
+      left:10%;
+      height: 5%;
+      width: 80%;
+      background-color: skyblue;
+    }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar is-dark">
+            <div class="navbar-brand">
+                <a href="{% url 'editor' %}" class="navbar-item">Daily journey</a>
+                <a href="{% url 'editor' %}" class="navbar-item">Home</a>
+                
+            </div>
+
+           <!--  <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="{% url 'editor' %}?docid=0" class="navbar-item">New day</a>
+                    <a href="{% url 'login' %}" class="navbar-item">Log out</a>
+                </div>
+            </div> -->
+        </nav>
+        <hr>
+<form method="post" >
+  <div class="form1" style="text-align: center;">
+        <h1>Register</h1>
+        {% csrf_token %}    
+        <label for="id_username">Username:</label>
+        <br>
+        <input id="user1"class="btn" type="text" name="username" required="id_username" style="border: 2px solid red;">
+        <br><br>
+        <label for="id_password1">Password:</label>
+        <br>
+        <input id="pass1"class="btn" type="password" name="password1" required id="id_password1" style="border: 2px solid red;">
+        <br><br>
+        <label for="id_password2">Re-enter password.</label>
+        <br>
+        <input id="pass2"class="btn" type="password" name="password2" autocomplete="new-password" required id="id_password2" style="border: 2px solid red;">
+        <br><br>
+        <input id="btn" type="submit" value="Register" style="border: 2px solid red;"><br>
+        <h1 style="color:#ed0505; font-size:20px">{{error}}</h1>
+        <h1 style="color:green; font-size:20px">{{info}}</h1>
+
+  </div>
+</form>
+       <div style="text-align: center;">
+        <a href="{% url 'login'%}"><input type="submit" name="" value="login" ></a>
+      </div>
+      <div class="card text-center">
+  <div class="card-header"> 
+  </div>
+  <hr>
+  <div class="card-body">
+    <h5 class="card-title">Make your day smile.</h5>
+    <p class="card-text">keep a daily diary of your dream, goals and accomplishment,if your life is worth living, it is worth of redcoring. </p>
+    <a href="{% url 'about' %}" class="btn btn-primary">About Us</a>
+  </div>
+</div>
+
+</body>
+</html>

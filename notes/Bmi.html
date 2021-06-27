@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculating</title>
+	<script>
+	/*window.onload=() =>{
+			let button=document.querySelector("#b");
+			button.addEventListener("click",CalculateBMI);
+
+		};*/
+		function calculateBMi(){
+			let Height=parseInt(document.querySelector("#Height").value);
+			let weight=parseInt(document.querySelector("#weight").value);
+			let result=document.querySelector("#result");
+
+			if (Height==="")
+				alert('under weight');
+			else if (weight==="")
+				alert("provide a valide weight");
+			else{
+				let bmi=(weight/((Height*Height)/10000));
+
+				if (bmi<18.6)
+					alter("under weight");
+				else if (bmi>18.6 && bmi<24.9)
+					alert("over weight");
+				else
+					alert("normal");
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p>Height in (cm)</p>
+		<input type="text" id=Height>
+		<p>weight in (kg)</p>
+		<input type="text" id=weight>
+		<button id="but" onclick="calculateBMi()">Calculator</button>
+		<div id=result>
+			
+		</div>
+	</div>
+
+</body>
+</html>
