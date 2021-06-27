@@ -25,7 +25,7 @@ SECRET_KEY = '&fw8cby(ggu&@-xe&a_9m1%hn8gvc5zh!%e@eh7lrohfqkqj5j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*","127.0.0.1"]
+ALLOWED_HOSTS = ['kinsan.herokuapp.com','127.0.0.1']
 
 
 # Application definition
